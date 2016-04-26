@@ -282,8 +282,8 @@ LD libr_socket.so
 Cloning into 'capstone'...
 CC libbochs.c
 ```
-This is where serious errors came up..."e.g. unsupported cpu??"
-```
+This is where *serious* errors came up..."e.g. unsupported cpu??"
+```asm
 [...]
 p/native/linux/linux_debug.c: In function linux_reg_profile・
 p/native/linux/linux_debug.c:28:2: error: #error "Unsupported Linux CPU"
@@ -320,7 +320,7 @@ CC mipsasm.c
 [...]
 ```
 And this is the "kills" for the compilation session..
-```asn
+```asm
 CC elf32-xtensa.c
 CC asm_z80.c
 CC asm_z80_cr.c

@@ -52,7 +52,7 @@ Final build report:
  - LIL_ENDIAN = 0
  - LIBVERSION = 0.10.3-git
 ```
-./configure (notes: incl checking, generating, using, updating..)
+./configure (tagged token: incl checking, creating, generating, using, updating..)
 ```asm
 export USE_R2_CAPSTONE=
 

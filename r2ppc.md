@@ -2,7 +2,7 @@ Next step of the r2 multi architecture testing is is compilation on powerpc, usi
 ```asm
 cpu             : 740/750
 temperature     : 62-64 C (uncalibrated)
-clock           : 266.000000MHz
+clock           : 266.000000MHz　＜＝＝はい、遅いです
 revision        : 3.1 (pvr 0008 0301)
 bogomips        : 33.20
 timebase        : 16601533
@@ -11,9 +11,8 @@ model           : Power Macintosh
 machine         : Power Macintosh
 motherboard     : AAPL,PowerMac G3 MacRISC
 detected as     : 49 (PowerMac G3 (Silk))
-pmac flags      : 00000000
 pmac-generation : OldWorld
-Memory          : 256 MB
+Memory          : 256 MB　＜＝＝すごいよね！生きている
 ```
 Source code used:
 ```asm

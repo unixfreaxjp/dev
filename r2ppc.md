@@ -331,8 +331,8 @@ asm.c:131:14: warning: unused variable static_plugin・[-Wunused-variable]
 LD libr_asm.so
 CC asm_propeller.c
 CC propeller_disas.c
-gcc: warning: /home/mung/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
-gcc: warning: /home/mung/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+gcc: warning: /test/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+gcc: warning: /test/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
 make[1]: *** [all] Error 2
 make: *** [all] Error 2
 Oops

@@ -282,3 +282,58 @@ LD libr_socket.so
 Cloning into 'capstone'...
 CC libbochs.c
 ```
+This is where serious errors came up..."e.g. unsupported cpu??"
+```
+[...]
+p/native/linux/linux_debug.c: In function linux_reg_profile・
+p/native/linux/linux_debug.c:28:2: error: #error "Unsupported Linux CPU"
+p/native/linux/linux_debug.c: In function linux_handle_signals・
+p/native/linux/linux_debug.c:43:2: warning: #warning DO MORE RDEBUGREASON HERE [-Wcpp]
+p/native/linux/linux_debug.c: In function print_fpu・
+p/native/linux/linux_debug.c:291:2: warning: #warning not implemented for this platform [-Wcpp]
+p/native/linux/linux_debug.c: In function linux_reg_read・
+p/native/linux/linux_debug.c:376:3: warning: #warning not implemented for this platform [-Wcpp]
+p/native/linux/linux_debug.c:383:4: error: unknown type name _DEBUG_REG_T・
+p/native/linux/linux_debug.c:296:7: warning: variable howfpu・set but not used [-Wunused-but-set-variable]
+p/native/linux/linux_debug.c: In function linux_reg_write・
+p/native/linux/linux_debug.c:425:43: error: struct user・has no member named 穹_debugreg・
+p/native/linux/linux_debug.c:431:17: error: _DEBUG_REG_T・undeclared (first use in this function)
+p/native/linux/linux_debug.c:431:17: note: each undeclared identifier is reported only once for each function it appears in
+p/native/linux/linux_debug.c:444:48: error: egs・undeclared (first use in this function)
+CC asm_malbolge.c
+p/native/linux/linux_debug.c: At top level:
+p/native/linux/linux_debug.c:203:13: warning: print_fpu・defined but not used [-Wunused-function]
+CC asm_mcs96.c
+p/native/linux/linux_debug.c: In function Linux_reg_profile・
+p/native/linux/linux_debug.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+make[4]: *** [p/native/linux/linux_debug.o] Error 1
+make[4]: *** Waiting for unfinished jobs....
+CC asm_mips_cs.c
+CC asm_mips_gnu.c
+CC mips-dis.c
+make[3]: *** [foo] Error 2
+make[2]: *** [debug] Error 2
+make[2]: *** Waiting for unfinished jobs....
+CC mips16-opc.c
+CC mips-opc.c
+CC mipsasm.c
+[...]
+```
+And this is the "kills" for the compilation session..
+```asn
+CC elf32-xtensa.c
+CC asm_z80.c
+CC asm_z80_cr.c
+CC asm.c
+CC code.c
+asm.c: In function xxx_asm_new・
+asm.c:131:14: warning: unused variable static_plugin・[-Wunused-variable]
+LD libr_asm.so
+CC asm_propeller.c
+CC propeller_disas.c
+gcc: warning: /home/mung/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+gcc: warning: /home/mung/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+make[1]: *** [all] Error 2
+make: *** [all] Error 2
+Oops
+```

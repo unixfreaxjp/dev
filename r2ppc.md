@@ -15,3 +15,14 @@ pmac flags      : 00000000
 pmac-generation : OldWorld
 Memory          : 256 MB
 ```
+Build summary:
+```asm
+BUILD SUMARY
+============
+COMPILER gcc
+CC gcc
+HOST_CC gcc
+HOST_OS linux
+BUILD_OS linux
+
+```

@@ -407,3 +407,5 @@ make[1]: *** [all] Error 2
 make: *** [all] Error 2
 Oops
 ```
+opened issue radare/radare2#4720
+https://github.com/radare/radare2/issues/4720

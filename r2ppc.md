@@ -1,4 +1,4 @@
-Next step is compilation on:
+Next step of the multi architecture testing is is compilation on powerpc, using cpu:
 ```asm
 cpu             : 740/750
 temperature     : 62-64 C (uncalibrated)

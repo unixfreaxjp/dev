@@ -1,6 +1,6 @@
 Next step is compilation on:
 ```asm
-cpu     : 740/750
+cpu             : 740/750
 temperature     : 62-64 C (uncalibrated)
 clock           : 266.000000MHz
 revision        : 3.1 (pvr 0008 0301)

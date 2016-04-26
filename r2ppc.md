@@ -26,3 +26,20 @@ HOST_OS linux
 BUILD_OS linux
 
 ```
+Final build report:
+```asm
+ - PREFIX = /test/bin/prefix/radare2/
+ - HAVE_LIB_GMP = 0
+ - HAVE_OPENSSL = 0
+ - USE_CAPSTONE = 0
+ - HAVE_FORK = 1
+ - VERSION = 0.10.3-git
+ - USE_LIB_ZIP = 0
+ - USE_LIB_MAGIC = 0
+ - DEBUGGER = 1
+ - CC = gcc
+ - USERCC = gcc
+ - USEROSTYPE = gnulinux
+ - LIL_ENDIAN = 0
+ - LIBVERSION = 0.10.3-git
+```

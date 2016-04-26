@@ -15,6 +15,15 @@ pmac flags      : 00000000
 pmac-generation : OldWorld
 Memory          : 256 MB
 ```
+Source code used:
+```asm
+From https://github.com/radare/radare2
+   d6cd018..5742092  master     -> origin/master
+Updating d6cd018..5742092
+Fast-forward
+ shlr/qnx/src/core.c |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+```
 Build summary:
 ```asm
 BUILD SUMARY

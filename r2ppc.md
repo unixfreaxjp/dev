@@ -1,4 +1,4 @@
-Next step of the multi architecture testing is is compilation on powerpc, using cpu:
+Next step of the r2 multi architecture testing is is compilation on powerpc, using cpu:
 ```asm
 cpu             : 740/750
 temperature     : 62-64 C (uncalibrated)

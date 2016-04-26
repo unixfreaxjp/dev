@@ -282,6 +282,7 @@ LD libr_socket.so
 Cloning into 'capstone'...
 CC libbochs.c
 ```
+After several "minor" *warnings*, the error is getting more serious..
 This is where *serious* errors came up..."e.g. unsupported cpu??"
 ```asm
 [...]

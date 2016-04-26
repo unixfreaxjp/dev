@@ -52,3 +52,58 @@ Final build report:
  - LIL_ENDIAN = 0
  - LIBVERSION = 0.10.3-git
 ```
+./configure (notes: incl checking, generating, using, updating..)
+```asm
+export USE_R2_CAPSTONE=
+
+configure-plugins: Loading ./plugins.def.cfg ..
+configure-plugins: Generating libr/config.h ..
+configure-plugins: Generating libr/config.mk ..
+SHARED: io.shm
+STATIC: anal.6502 anal.8051 anal.arc [...] ppc_pseudo parse.x86_pseudo
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking target system type... powerpc-unknown-linux-gnu
+checking for working directories... current
+using prefix '/home/mung/bin/prefix/radare2/'
+checking for c compiler... gcc
+checking for dynamic library... required
+checking for patch... /usr/bin/patch
+checking for git... /usr/bin/git
+checking host endianness... big
+checking for libmagic ... yes
+Using PKGCONFIG: pkg-config
+checking pkg-config flags for capstone... no
+checking for libz ... no
+checking for libzip ... no
+checking for libssl ... no
+Using PKGCONFIG: pkg-config
+checking pkg-config flags for openssl... no
+checking for liblua5.1 ... no
+creating ./config-user.mk
+creating libr/include/r_userconf.h
+creating pkgcfg/r_io.pc
+creating pkgcfg/r_db.pc
+creating pkgcfg/r_magic.pc
+creating pkgcfg/r_asm.pc
+creating pkgcfg/r_bin.pc
+creating pkgcfg/r_anal.pc
+creating pkgcfg/r_hash.pc
+creating pkgcfg/r_cons.pc
+creating pkgcfg/r_core.pc
+creating pkgcfg/r_lang.pc
+creating pkgcfg/r_socket.pc
+creating pkgcfg/r_debug.pc
+creating pkgcfg/r_reg.pc
+creating pkgcfg/r_config.pc
+creating pkgcfg/r_flags.pc
+creating pkgcfg/r_syscall.pc
+creating pkgcfg/r_util.pc
+creating pkgcfg/r_search.pc
+creating pkgcfg/r_bp.pc
+creating pkgcfg/r_parse.pc
+creating pkgcfg/r_fs.pc
+cleaning temporally files... done
+Generating r_version.h file
+Update libr/include/r_version.h
+```

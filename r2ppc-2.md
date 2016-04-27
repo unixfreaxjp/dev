@@ -195,7 +195,7 @@ Optional Features:
   --with-syszip          force to use system's libzip and zlib
   --without-gpl          do not build GPL code (grub, cxx, .
   ```
-  retried with --disable-debugger
+  retried with --disable-debugger option, testing...
 ```asm
 $ ./configure --disable-debugger
 configure-plugins: Loading ./plugins.cfg ..
@@ -263,4 +263,6 @@ Final report:
  - LIL_ENDIAN = 0
  - LIBVERSION = 0.10.3-git
 ```
-looks good now, compiling...
+looks good now, forming script to use --disable-debugger in this test
+patching these:
+https://lh3.googleusercontent.com/-0-GDsLxmuGU/VyDO3_G7iqI/AAAAAAAAUyw/oNeXxF3cSQoNUwqnL0bRbdb0reMqHCaVgCLcB/h120/003.PNG

@@ -519,4 +519,115 @@ CC dex.c
 ```
 looks good.. build continuing...
 
+Oh, maybe not that good too, same error looks occurred:
+```asm
+
+
+[...]
+
+CC utils.c
+CC hashtable.c
+CC hashvector.c
+CC pe64.c
+CC bin_pebble.c
+CC bin_psxexe.c
+/test/radare2/libr/..//libr/anal/p/../..//asm/arch/tms320/c55x_plus/hashvector.c:97:25: warning: 'ins_hash' defined but not used [-Wunused-variable]
+CC anal_v810.c
+
+[...]
+
+CC demangler.c
+CC microsoft_demangle.c
+/test/radare2/libr/..//libr/anal/p/../../asm/arch/z80_cr/z80_tab.h:936:19: warning: 'z80_op' defined but not used [-Wunused-variable]
+CC objc.c
+
+[...]
+
+CC anal_ex.c
+CC switch.c
+anal.c: In function 'r_anal_set_reg_profile':
+anal.c:205:7: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+CC state.c
+
+[...]
+
+CC mmemory.c
+CC parse_ppc_pseudo.c
+CC parse_x86_pseudo.c
+LD libr_parse.so
+CC parse_z80_pseudo.c
+gcc: warning: /test/radare2/libr/../shlr/zip/librz.a: linker input file unused because linking not done
+DIR asm
+DIR debug
+CC asm_6502.c
+CC asm_8051.c
+
+[...] // here comes the debugger... why it is compiled even it was configured as disabled?
+
+CC debug_bf.c
+CC asm_cris_gnu.c
+CC cris-dis.c
+CC debug_bochs.c
+CC debug_esil.c
+CC cris-opc.c
+CC asm_csr.c
+CC asm_dalvik.c
+CC asm_dcpu16.c
+CC debug_gdb.c
+CC asm_ebc.c
+CC debug_native.c
+CC debug_qnx.c
+CC asm_gb.c
+CC asm_h8300.c
+CC asm_hppa_gnu.c
+CC debug_rap.c
+CC hppa-dis.c
+CC debug_wind.c
+CC asm_i4004.c
+CC linux_debug.c
+CC asm_i8080.c
+CC asm_java.c
+CC asm_lanai_gnu.c
+CC lanai-dis.c
+CC lanai-opc.c
+CC asm_lh5801.c
+CC asm_lm32.c
+p/native/linux/linux_debug.c: In function 'linux_reg_profile':
+p/native/linux/linux_debug.c:28:2: error: #error "Unsupported Linux CPU"
+p/native/linux/linux_debug.c: In function 'linux_handle_signals':
+p/native/linux/linux_debug.c:43:2: warning: #warning DO MORE RDEBUGREASON HERE [-Wcpp]
+p/native/linux/linux_debug.c: In function 'print_fpu':
+p/native/linux/linux_debug.c:291:2: warning: #warning not implemented for this platform [-Wcpp]
+p/native/linux/linux_debug.c: In function 'linux_reg_read':
+p/native/linux/linux_debug.c:376:3: warning: #warning not implemented for this platform [-Wcpp]
+p/native/linux/linux_debug.c:383:4: error: unknown type name 'R_DEBUG_REG_T'
+p/native/linux/linux_debug.c:296:7: warning: variable 'showfpu' set but not used [-Wunused-but-set-variable]
+p/native/linux/linux_debug.c: In function 'linux_reg_write':CC asm_m68k.c
+
+p/native/linux/linux_debug.c:425:43: error: 'struct user' has no member named 'u_debugreg'
+p/native/linux/linux_debug.c:431:17: error: 'R_DEBUG_REG_T' undeclared (first use in this function)
+p/native/linux/linux_debug.c:431:17: note: each undeclared identifier is reported only once for each function it appears in
+p/native/linux/linux_debug.c: At top level:
+p/native/linux/linux_debug.c:203:13: warning: 'print_fpu' defined but not used [-Wunused-function]
+p/native/linux/linux_debug.c: In function 'linux_reg_profile':
+p/native/linux/linux_debug.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+make[4]: *** [p/native/linux/linux_debug.o] Error 1
+make[4]: *** Waiting for unfinished jobs....
+CC m68k_disasm.c
+CC asm_m68k_cs.c
+CC asm_malbolge.c
+make[3]: *** [foo] Error 2
+make[2]: *** [debug] Error 2
+make[2]: *** Waiting for unfinished jobs....
+CC asm_mcs96.c
+CC asm_mips_cs.c
+CC asm_mips_gnu.c
+CC mips-dis.c
+CC mips16-opc.c
+CC mips-opc.c
+CC mipsasm.c
+[...]
+```
+
+
 to be continued..

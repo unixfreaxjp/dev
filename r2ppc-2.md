@@ -265,4 +265,4 @@ Final report:
 ```
 looks good now, forming script to use --disable-debugger in this test
 patching these:
-https://lh3.googleusercontent.com/-0-GDsLxmuGU/VyDO3_G7iqI/AAAAAAAAUyw/oNeXxF3cSQoNUwqnL0bRbdb0reMqHCaVgCLcB/h120/003.PNG
+https://lh3.googleusercontent.com/-0-GDsLxmuGU/VyDO3_G7iqI/AAAAAAAAUyw/oNeXxF3cSQoNUwqnL0bRbdb0reMqHCaVgCLcB/s720/003.PNG

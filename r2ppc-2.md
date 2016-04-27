@@ -506,5 +506,17 @@ CC PIC sdb.c
 CC PIC ht.c
 CC PIC base64.c
 ```
+The warning came up so far is so fewer than build with debugger..I collect in here, only two or three (previously..a lot)
+```asm
+[...]
+calc.c: In function 'r_hash_calculate':
+calc.c:39:8: warning: unused variable 'pres' [-Wunused-variable]
+[...]
+CC cr16_disas.c
+/test/radare2/libr/..//libr/bin/p/bin_elf.c:581:15: warning: 'patch_relocs' defined but not used [-Wunused-function]
+CC dex.c
+[...]
+```
+looks good.. build continuing...
 
 to be continued..

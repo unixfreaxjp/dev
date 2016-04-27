@@ -363,6 +363,148 @@ CC zip_delete.c
 CC zip_dir_add.c
 
 ```
-..this looks very fine :)
+..this looks very fine :) build is continuing...
+```asm
+CC http_server.c
+CC rap_server.c
+CC run.c
+CC r2pipe.c
+socket.c: In function 'r_socket_close':
+socket.c:262:7: warning: unused variable 'buf' [-Wunused-variable]
+LD libr_socket.so
+[capstone] Already in TIP, no need to update from git
+HEAD is now at a4bdbc8 x86: do not print LJMP/LCALL with ptr. this fixes issue #429
+patching file arch/X86/X86ATTInstPrinter.c
+Hunk #1 succeeded at 600 (offset 24 lines).
+patching file arch/X86/X86IntelInstPrinter.c
+Hunk #1 succeeded at 795 (offset 39 lines).
+patching file Makefile
+Hunk #1 succeeded at 285 (offset 6 lines).
+Hunk #2 succeeded at 302 (offset 6 lines).
+Hunk #3 succeeded at 311 (offset 6 lines).
+Hunk #4 succeeded at 323 (offset 1 line).
+  CC      cs.o
+  CC      MCInstrDesc.o
+  CC      utils.o
+  CC      SStream.o
+  CC      MCRegisterInfo.o
+  CC      arch/ARM/ARMDisassembler.o
+  CC      arch/ARM/ARMModule.o
+  CC      arch/ARM/ARMInstPrinter.o
+  CC      arch/ARM/ARMMapping.o
+CC libbochs.c
+  CC      arch/AArch64/AArch64BaseInfo.o
+  CC      arch/AArch64/AArch64Disassembler.o
+
+BUILD SUMARY
+============
+COMPILER gcc
+CC gcc
+HOST_CC gcc
+HOST_OS linux
+BUILD_OS linux
+============
+
+>>>>>>>>>>>>>>>>
+NATIVE BUILD SDB
+>>>>>>>>>>>>>>>>
+
+  CC      arch/AArch64/AArch64InstPrinter.o
+  CC      arch/AArch64/AArch64Mapping.o
+CC cdb.c
+CC buffer.c
+ar: creating lib/libbochs.a
+a - src/libbochs.o
+CC cdb_make.c
+  CC      arch/AArch64/AArch64Module.o
+CC ls.c
+  CC      arch/M68K/M68KInstPrinter.o
+CC ht.c
+CC sdb.c
+CC num.c
+ar: creating libr_wind.a
+CC base64.c
+  CC      arch/M68K/M68KDisassembler.o
+CC match.c
+CC json.c
+CC ns.c
+CC lock.c
+  CC      arch/M68K/M68KModule.o
+  CC      arch/Mips/MipsDisassembler.o
+  CC      arch/Mips/MipsInstPrinter.o
+CC util.c
+CC disk.c
+  CC      arch/Mips/MipsMapping.o
+  CC      arch/Mips/MipsModule.o
+CC query.c
+CC array.c
+CC fmt.c
+  CC      arch/PowerPC/PPCDisassembler.o
+CC journal.c
+CC main.c
+  CC      arch/PowerPC/PPCInstPrinter.o
+AR libsdb.a
+ar: creating libsdb.a
+  CC      arch/PowerPC/PPCMapping.o
+  CC      arch/PowerPC/PPCModule.o
+BIN sdb
+  CC      arch/Sparc/SparcDisassembler.o
+
+>>>>>>>>>>>>>>>>
+TARGET BUILD SDB
+>>>>>>>>>>>>>>>>
+
+  CC      arch/Sparc/SparcInstPrinter.o
+CC cdb.c
+  CC      arch/Sparc/SparcMapping.o
+  CC      arch/Sparc/SparcModule.o
+CC buffer.c
+CC cdb_make.c
+CC ls.c
+  CC      arch/SystemZ/SystemZDisassembler.o
+  CC      arch/SystemZ/SystemZInstPrinter.o
+CC ht.c
+CC sdb.c
+  CC      arch/SystemZ/SystemZMapping.o
+  CC      arch/SystemZ/SystemZModule.o
+CC num.c
+CC base64.c
+CC match.c
+CC json.c
+CC ns.c
+CC lock.c
+  CC      arch/SystemZ/SystemZMCTargetDesc.o
+CC util.c
+CC disk.c
+  CC      arch/X86/X86DisassemblerDecoder.o
+CC query.c
+CC array.c
+CC fmt.c
+CC journal.c
+  CC      arch/X86/X86Disassembler.o
+  CC      arch/X86/X86IntelInstPrinter.o
+  CC      arch/X86/X86ATTInstPrinter.o
+  CC      arch/X86/X86Mapping.o
+AR libsdb.a
+ar: creating libsdb.a
+  CC      arch/X86/X86Module.o
+  CC      arch/XCore/XCoreDisassembler.o
+  CC      arch/XCore/XCoreInstPrinter.o
+  CC      arch/XCore/XCoreMapping.o
+  CC      arch/XCore/XCoreModule.o
+  CC      MCInst.o
+  AR      libcapstone.a
+ar: creating ./libcapstone.a
+make -C sdb
+CC main.c
+BIN sdb
+CC PIC cdb.c
+CC PIC cdb_make.c
+CC PIC buffer.c
+CC PIC ls.c
+CC PIC sdb.c
+CC PIC ht.c
+CC PIC base64.c
+```
 
 to be continued..

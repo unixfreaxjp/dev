@@ -173,7 +173,7 @@ Oops
 Continuing testing with the below advise:
 > ![](https://lh3.googleusercontent.com/-S3VpBidVApg/VyC3rhqZ6cI/AAAAAAAAUyg/Km23CGbxgwMtZo6FE3klFvOaSrWQyfPAgCLcB/s600/001.PNG)
 
-Configure part, without debugger was executed well:
+Configure part, without debugger wasn't executed well:
 ```asm
 $ ./configure --without-debugger
 configure-plugins: Loading ./plugins.cfg ..
@@ -195,7 +195,7 @@ Optional Features:
   --with-syszip          force to use system's libzip and zlib
   --without-gpl          do not build GPL code (grub, cxx, .
   ```
-  retried with --disable-debugger option, testing this option firstly...
+  retried with --disable-debugger option, testing the option firstly w/autoconf
 ```asm
 $ ./configure --disable-debugger
 configure-plugins: Loading ./plugins.cfg ..
@@ -251,7 +251,7 @@ Final report:
  - PREFIX = /usr/local
  - HAVE_LIB_GMP = 0
  - HAVE_OPENSSL = 0
- - USE_CAPSTONE = 0
+ - USE_CAPSTONE = 0  <====== okay
  - HAVE_FORK = 1
  - VERSION = 0.10.3-git
  - USE_LIB_ZIP = 0
@@ -264,10 +264,10 @@ Final report:
  - LIBVERSION = 0.10.3-git
 ```
 looks good now, forming script to use --disable-debugger in this test
-patching these:
+patching these code in sys/build.sh
 ![](https://lh3.googleusercontent.com/-0-GDsLxmuGU/VyDO3_G7iqI/AAAAAAAAUyw/oNeXxF3cSQoNUwqnL0bRbdb0reMqHCaVgCLcB/s920/003.PNG)
 
-should work:
+Now the sys/user.sh or sys/install.sh should work:
 ```asm
 $ sys/user.sh --without-pull
 

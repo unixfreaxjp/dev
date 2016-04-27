@@ -1,4 +1,4 @@
-Starting new test of [] based on advise in [] 
+Starting new test of [https://github.com/unixfreaxjp/dev/blob/master/r2ppc.md] based on advise in [] 
 Sample environment:
 ```asm
 $ sys/user.sh

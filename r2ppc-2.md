@@ -1,5 +1,6 @@
 Starting new test of [https://github.com/unixfreaxjp/dev/blob/master/r2ppc.md] based on advise received xref:[https://github.com/radare/radare2/issues/4720#issuecomment-214844475] 
-Sample environment:
+
+Same environment:
 ```asm
 $ sys/user.sh
 WARNING: Updating from remote repository

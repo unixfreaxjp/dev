@@ -170,7 +170,7 @@ make[1]: *** [all] Error 2
 make: *** [all] Error 2
 Oops
 ```
-Continuing testing with the below advise:
+Continuing testing with the below advise, xfref:[https://github.com/radare/radare2/issues/4720#issuecomment-215074744]
 > ![](https://lh3.googleusercontent.com/-S3VpBidVApg/VyC3rhqZ6cI/AAAAAAAAUyg/Km23CGbxgwMtZo6FE3klFvOaSrWQyfPAgCLcB/s600/001.PNG)
 
 Configure part, without debugger wasn't executed well:

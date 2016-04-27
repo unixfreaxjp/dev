@@ -628,6 +628,20 @@ CC mips-opc.c
 CC mipsasm.c
 [...]
 ```
-
+I sweared the config was correct for not using debugger. But it is still compiling native linux debugger why the error occured.
+Well, obviously same compilation error is ending the build process:
+```asm
+CC asm_z80_cr.c
+CC asm.c
+CC code.c
+LD libr_asm.so
+CC asm_propeller.c
+CC propeller_disas.c
+gcc: warning: /home/mung/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+gcc: warning: /home/mung/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+make[1]: *** [all] Error 2
+make: *** [all] Error 2
+Oops
+```
 
 to be continued..

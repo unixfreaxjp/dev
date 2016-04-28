@@ -2,7 +2,7 @@
 
 - Upstream issue: https://github.com/radare/radare2/issues/4720
 - Previous test (2nd) log: https://github.com/unixfreaxjp/dev/blob/master/r2ppc-2.md
-- Fresh complete full made:
+- Fresh pull to complete full test build:
 ```asm
 $ git clone https://github.com/radare/radare2.git
 Cloning into 'radare2'...

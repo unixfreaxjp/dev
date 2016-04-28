@@ -652,6 +652,9 @@ https://github.com/radare/radare2/issues/4720#issuecomment-215122291
 Summary and next approach:
 > ![](https://lh3.googleusercontent.com/-9njHiC0tjlA/VyF5Ud6QFaI/AAAAAAAAUzI/GtR3Idvnq5ocTHfjYHKI1c_4ZovXxig3gCLcB/s800/005.PNG)
 
-On it..
+Okat, next step (on it):
+
+- Deleting test patch in build.sh
+- Applying patch reported in https://github.com/radare/radare2/issues/4720#issuecomment-215298116
 
 (to be continued)

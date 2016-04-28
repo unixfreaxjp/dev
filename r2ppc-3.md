@@ -1,5 +1,7 @@
-Previous reference:
+**Previous reference**
+
 Upstream issue: https://github.com/radare/radare2/issues/4720
+
 Previous test (2nd) log: https://github.com/unixfreaxjp/dev/blob/master/r2ppc-2.md
 
 Fresh complete full made:

@@ -649,12 +649,13 @@ screenshot for evidence:
 Write report to the dev upstream #4720:
 https://github.com/radare/radare2/issues/4720#issuecomment-215122291
 
-Summary and next approach:
+Analyzing, reevaluating the dev and thinking of next approach:
 > ![](https://lh3.googleusercontent.com/-9njHiC0tjlA/VyF5Ud6QFaI/AAAAAAAAUzI/GtR3Idvnq5ocTHfjYHKI1c_4ZovXxig3gCLcB/s800/005.PNG)
+> figuring what was missing https://github.com/radare/radare2/issues/4720#issuecomment-215298116
 
 Currently in tests:
 
-- Applying patch reported in https://github.com/radare/radare2/issues/4720#issuecomment-215298116 [done]
+- Applying Jeffrey Crowell <crowell@bu.edu> patch drafted in https://github.com/radare/radare2/issues/4720#issuecomment-215298116 [done]
 - keep build.sh with configure --disable-debugger [done] 
 - test the patch AND configure --disable-debugger first [now]
 - test the patch AND enable debugger [task]

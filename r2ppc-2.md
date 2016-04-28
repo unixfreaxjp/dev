@@ -657,7 +657,125 @@ Currently in tests:
 
 - Applying Jeffrey Crowell <crowell@bu.edu> patch drafted in https://github.com/radare/radare2/issues/4720#issuecomment-215298116 [done]
 - keep build.sh with configure --disable-debugger [done] 
-- test the patch AND configure --disable-debugger first [now]
+- test the patch AND configure --disable-debugger first [FAILED..see parsed log below]
 - test the patch AND enable debugger [task]
+
+Parsed failed log:
+```asm
+[...]
+
+CC calc.c
+CC xxhash.c
+calc.c: In function 'r_hash_calculate':
+calc.c:39:8: warning: unused variable 'pres' [-Wunused-variable]
+CC adler32.c
+LD libr_hash.so
+DIR socket
+DIR reg
+
+[...]
+
+/test/radare2/libr/..//libr/bin/p/bin_elf.c:581:15: warning: 'patch_relocs' defined but not used [-Wunused-function]
+CC dex.c
+CC anal_bf.c
+CC bin_dol.c
+CC bin_dyldcache.c
+CC bin_elf.c
+CC anal_cr16.c
+
+[...]
+
+CC utils.c
+CC hashtable.c
+CC hashvector.c
+CC anal_v810.c
+CC v810_disas.c
+CC anal_v850.c
+CC v850_disas.c
+/test/radare2/libr/..//libr/anal/p/../..//asm/arch/tms320/c55x_plus/hashvector.c:97:25: warning: 'ins_hash' defined but not used [-Wunused-variable]
+
+[...]
+
+CC anal_z80.c
+CC meta.c
+CC reflines.c
+CC ref.c
+CC op.c
+CC fcn.c
+CC bb.c
+/test/radare2/libr/..//libr/anal/p/../../asm/arch/z80_cr/z80_tab.h:936:19: warning: 'z80_op' defined but not used [-Wunused-variable]
+CC var.c
+
+[...]
+
+CC anal_ex.c
+CC switch.c
+CC state.c
+CC cycles.c
+anal.c: In function 'r_anal_set_reg_profile':
+anal.c:205:7: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+CC esil_stats.c
+CC esil_trace.c
+CC flirt.c
+CC labels.c
+CC esil2reil.c
+CC pin.c
+LD libr_anal.so
+DIR parse
+CC parse.c
+CC code.c
+CC parse_6502_pseudo.c
+CC parse_arm_pseudo.c
+CC parse_att2intel.c
+CC parse_dalvik_pseudo.c
+CC parse_m68k_pseudo.c
+CC parse_mips_pseudo.c
+CC parse_mreplace.c
+CC mreplace.c
+CC mmemory.c
+CC parse_ppc_pseudo.c
+CC parse_x86_pseudo.c
+LD libr_parse.so
+CC parse_z80_pseudo.c
+gcc: warning: /test/radare2/libr/../shlr/zip/librz.a: linker input file unused because linking not done
+
+[...]
+
+CC linux_debug.c
+p/native/linux/linux_debug.c: In function 'linux_reg_profile':
+p/native/linux/linux_debug.c:30:2: error: #error "Unsupported Linux CPU"
+p/native/linux/linux_debug.c: In function 'linux_handle_signals':
+p/native/linux/linux_debug.c:45:2: warning: #warning DO MORE RDEBUGREASON HERE [-Wcpp]
+p/native/linux/linux_debug.c: In function 'print_fpu':
+p/native/linux/linux_debug.c:293:2: warning: #warning not implemented for this platform [-Wcpp]
+p/native/linux/linux_debug.c: In function 'linux_reg_read':
+p/native/linux/linux_debug.c:378:3: warning: #warning not implemented for this platform [-Wcpp]
+p/native/linux/linux_debug.c:385:4: error: unknown type name 'R_DEBUG_REG_T'
+p/native/linux/linux_debug.c:298:7: warning: variable 'showfpu' set but not used [-Wunused-but-set-variable]
+p/native/linux/linux_debug.c: In function 'linux_reg_write':
+p/native/linux/linux_debug.c:427:43: error: 'struct user' has no member named 'u_debugreg'
+p/native/linux/linux_debug.c:433:17: error: 'R_DEBUG_REG_T' undeclared (first use in this function)
+p/native/linux/linux_debug.c:433:17: note: each undeclared identifier is reported only once for each function it appears in
+p/native/linux/linux_debug.c: At top level:
+p/native/linux/linux_debug.c:205:13: warning: 'print_fpu' defined but not used [-Wunused-function]
+p/native/linux/linux_debug.c: In function 'linux_reg_profile':
+p/native/linux/linux_debug.c:32:1: warning: control reaches end of non-void function [-Wreturn-type]
+make[4]: *** [p/native/linux/linux_debug.o] Error 1
+make[4]: *** Waiting for unfinished jobs....
+make[3]: *** [foo] Error 2
+make[2]: *** [debug] Error 2
+make[2]: *** Waiting for unfinished jobs....
+LD libr_asm.so
+CC asm_propeller.c
+CC propeller_disas.c
+gcc: warning: /test/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+gcc: warning: /test/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+make[1]: *** [all] Error 2
+make: *** [all] Error 2
+Oops
+~/radare2$
+```
+The p/native/linux/linux_debug.c needs more adjustment for ppc CPU, either to be added in linux_ppc.h or in linux_debug.c
+
 
 (to be continued)

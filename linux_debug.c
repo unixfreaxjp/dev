@@ -1,4 +1,5 @@
 /* radare - LGPL - Copyright 2009-2015 - pancake */
+/* three places added #if 0 to ignore error in compilation ppc - during test @unixfreaxjp */
 
 #include <r_debug.h>
 #include <r_asm.h>

@@ -842,3 +842,4 @@ https://github.com/radare/radare2/issues/4720#issuecomment-215410736
 Replied and conducting fresh test based on:
 https://github.com/radare/radare2/issues/4720#issuecomment-215421056
 
+Goto fresh test in: https://github.com/unixfreaxjp/dev/blob/master/r2ppc-3.md

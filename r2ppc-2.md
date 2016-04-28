@@ -645,11 +645,13 @@ Oops
 ```
 screenshot for evidence:
 ![](https://lh3.googleusercontent.com/-FidIEZJWmiE/VyF4Yhs3HTI/AAAAAAAAUzA/ZqHALbGhOcUMYnroJMf0YVUxhAk5XpFKwCLcB/s800/004.PNG)
+
 Write report to the dev upstream #4720:
 https://github.com/radare/radare2/issues/4720#issuecomment-215122291
 
 Summary and next approach:
 > ![](https://lh3.googleusercontent.com/-9njHiC0tjlA/VyF5Ud6QFaI/AAAAAAAAUzI/GtR3Idvnq5ocTHfjYHKI1c_4ZovXxig3gCLcB/s800/005.PNG)
+
 On it..
 
 (to be continued)

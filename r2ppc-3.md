@@ -15,6 +15,7 @@ Checking out files: 100% (2520/2520), done.
 ```
 Starting non root basic compile:
 ```asm
+
 $ sys/user.sh
 WARNING: Updating from remote repository
 Already up-to-date.
@@ -30,7 +31,7 @@ checking build system type... powerpc-unknown-linux-gnu
 checking host system type... powerpc-unknown-linux-gnu
 checking target system type... powerpc-unknown-linux-gnu
 checking for working directories... current
-using prefix '/home/mung/bin/prefix/radare2/'
+using prefix '/test/bin/prefix/radare2/'
 checking for c compiler... gcc
 checking for dynamic library... required
 checking for patch... /usr/bin/patch
@@ -71,7 +72,7 @@ creating pkgcfg/r_fs.pc
 cleaning temporally files... done
 
 Final report:
- - PREFIX = /home/mung/bin/prefix/radare2/
+ - PREFIX = /test/bin/prefix/radare2/
  - HAVE_LIB_GMP = 0
  - HAVE_OPENSSL = 0
  - USE_CAPSTONE = 0
@@ -156,7 +157,423 @@ CC zip_replace.c
 CC zip_set_archive_comment.c
 CC zip_set_archive_flag.c
 CC zip_set_default_password.c
+CC zip_set_file_comment.c
+CC zip_set_file_compression.c
+CC zip_set_name.c
+CC zip_source_buffer.c
+CC zip_source_close.c
+CC zip_source_crc.c
+CC zip_source_deflate.c
+CC zip_source_error.c
+CC zip_source_file.c
+CC zip_source_filep.c
+CC zip_source_free.c
+CC zip_source_function.c
+CC zip_source_layered.c
+CC zip_source_open.c
+CC zip_source_pkware.c
+CC zip_source_pop.c
+CC zip_source_read.c
+CC zip_source_stat.c
+CC zip_source_window.c
+CC zip_source_zip.c
+CC zip_source_zip_new.c
+CC zip_stat.c
+CC zip_stat_index.c
+CC zip_stat_init.c
+CC zip_strerror.c
+CC zip_string.c
+CC zip_unchange.c
+CC zip_unchange_all.c
+CC zip_unchange_archive.c
+CC zip_unchange_data.c
+CC zip_utf-8.c
+LIB libr_zip.so
+ar: creating libr_zip.a
+ar: creating librz.a
+CC mem.c
+CC pool.c
+CC num.c
+CC str.c
+CC hex.c
+CC file.c
+CC range.c
+CC prof.c
+CC cache.c
+CC sys.c
+CC buf.c
+CC w32-sys.c
+CC base64.c
+CC base85.c
+CC base91.c
+CC list.c
+CC flist.c
+CC ht.c
+CC ht64.c
+CC mixed.c
+CC btree.c
+CC chmod.c
+CC graph.c
+CC regcomp.c
+CC regerror.c
+CC regexec.c
+CC uleb128.c
+CC sandbox.c
+CC calc.c
+CC thread.c
+CC thread_lock.c
+CC thread_msg.c
+CC strpool.c
+CC bitmap.c
+CC strht.c
+CC p_date.c
+CC p_format.c
+CC print.c
+CC p_seven.c
+CC slist.c
+CC randomart.c
+CC log.c
+CC zip.c
+CC debruijn.c
+CC utf8.c
+CC strbuf.c
+CC lib.c
+CC name.c
+CC spaces.c
+CC diff.c
+CC bdiff.c
+CC stack.c
+CC queue.c
+CC tree.c
+CC des.c
+CC swap.c
+LD libr_util.so
+CC socket.c
+CC proc.c
+CC http.c
+CC http_server.c
+CC rap_server.c
+CC run.c
+CC r2pipe.c
+socket.c: In function 'r_socket_close':
+socket.c:262:7: warning: unused variable 'buf' [-Wunused-variable]
+LD libr_socket.so
+Cloning into 'capstone'...
+CC libbochs.c
 
+BUILD SUMARY
+============
+COMPILER gcc
+CC gcc
+HOST_CC gcc
+HOST_OS linux
+BUILD_OS linux
+============
+
+>>>>>>>>>>>>>>>>
+NATIVE BUILD SDB
+>>>>>>>>>>>>>>>>
+
+CC buffer.c
+CC cdb.c
+CC cdb_make.c
+CC ls.c
+CC ht.c
+CC num.c
+CC sdb.c
+CC base64.c
+CC match.c
+ar: creating lib/libbochs.a
+a - src/libbochs.o
+ar: creating libr_wind.a
+CC json.c
+CC ns.c
+CC lock.c
+CC util.c
+CC disk.c
+CC query.c
+CC array.c
+CC fmt.c
+CC journal.c
+CC main.c
+remote: Counting objects: 19254, done.
+AR libsdb.abjects:  12% (2318/19254), 436.01 KiB | 117 KiB/s
+ar: creating libsdb.a3% (2504/19254), 468.01 KiB | 110 KiB/s
+BIN sdb
+Receiving objects:  14% (2696/19254), 500.01 KiB | 105 KiB/s
+>>>>>>>>>>>>>>>>
+TARGET BUILD SDB
+>>>>>>>>>>>>>>>>
+
+CC cdb.cg objects:  16% (3081/19254), 572.01 KiB | 87 KiB/s
+CC cdb_make.c
+CC buffer.c
+CC ls.c
+CC sdb.c
+CC ht.c
+CC num.c
+CC base64.c
+CC match.c
+CC json.c
+CC ns.c
+CC lock.c objects:  16% (3213/19254), 1.15 MiB | 63 KiB/s
+CC util.c objects:  16% (3213/19254), 1.21 MiB | 61 KiB/s
+CC disk.c
+CC query.c
+CC array.c
+CC fmt.c
+CC journal.cjects:  16% (3214/19254), 1.31 MiB | 64 KiB/s
+AR libsdb.abjects:  17% (3337/19254), 2.11 MiB | 46 KiB/s
+ar: creating libsdb.a
+remote: Total 19254 (delta 0), reused 0 (delta 0), pack-reused 19253
+Receiving objects: 100% (19254/19254), 29.79 MiB | 64 KiB/s, done.
+Resolving deltas: 100% (13729/13729), done.
+Checking out files: 100% (588/588), done.
+[capstone] Updating capstone from git...
+HEAD 0c864409f3eb7885c6d027aceb6ffbb70783e322
+TIP a4bdbc81575ff5d9e571237be09b30823cdde122
+HEAD is now at a997340 Merge branch 'master' of https://github.com/aquynh/capstone
+Checking out files: 100% (318/318), done.
+Branch next set up to track remote branch next from origin.
+Switched to a new branch 'next'
+Already up-to-date.
+HEAD is now at a4bdbc8 x86: do not print LJMP/LCALL with ptr. this fixes issue #429
+HEAD is now at a4bdbc8 x86: do not print LJMP/LCALL with ptr. this fixes issue #429
+patching file arch/X86/X86ATTInstPrinter.c
+Hunk #1 succeeded at 600 (offset 24 lines).
+patching file arch/X86/X86IntelInstPrinter.c
+Hunk #1 succeeded at 795 (offset 39 lines).
+patching file Makefile
+Hunk #1 succeeded at 285 (offset 6 lines).
+Hunk #2 succeeded at 302 (offset 6 lines).
+Hunk #3 succeeded at 311 (offset 6 lines).
+Hunk #4 succeeded at 323 (offset 1 line).
+  CC      cs.o
+  CC      utils.o
+  CC      MCInstrDesc.o
+  CC      SStream.o
+  CC      MCRegisterInfo.o
+  CC      arch/ARM/ARMDisassembler.o
+  CC      arch/ARM/ARMInstPrinter.o
+  CC      arch/ARM/ARMMapping.o
+  CC      arch/ARM/ARMModule.o
+  CC      arch/AArch64/AArch64BaseInfo.o
+  CC      arch/AArch64/AArch64InstPrinter.o
+  CC      arch/AArch64/AArch64Disassembler.o
+  CC      arch/AArch64/AArch64Mapping.o
+  CC      arch/AArch64/AArch64Module.o
+  CC      arch/M68K/M68KInstPrinter.o
+  CC      arch/M68K/M68KDisassembler.o
+  CC      arch/M68K/M68KModule.o
+  CC      arch/Mips/MipsDisassembler.o
+  CC      arch/Mips/MipsInstPrinter.o
+  CC      arch/Mips/MipsMapping.o
+  CC      arch/Mips/MipsModule.o
+  CC      arch/PowerPC/PPCDisassembler.o
+  CC      arch/PowerPC/PPCInstPrinter.o
+  CC      arch/PowerPC/PPCMapping.o
+  CC      arch/PowerPC/PPCModule.o
+  CC      arch/Sparc/SparcDisassembler.o
+  CC      arch/Sparc/SparcInstPrinter.o
+  CC      arch/Sparc/SparcMapping.o
+  CC      arch/Sparc/SparcModule.o
+  CC      arch/SystemZ/SystemZDisassembler.o
+  CC      arch/SystemZ/SystemZInstPrinter.o
+  CC      arch/SystemZ/SystemZMapping.o
+  CC      arch/SystemZ/SystemZModule.o
+  CC      arch/SystemZ/SystemZMCTargetDesc.o
+  CC      arch/X86/X86DisassemblerDecoder.o
+  CC      arch/X86/X86Disassembler.o
+  CC      arch/X86/X86IntelInstPrinter.o
+  CC      arch/X86/X86ATTInstPrinter.o
+  CC      arch/X86/X86Mapping.o
+  CC      arch/X86/X86Module.o
+  CC      arch/XCore/XCoreDisassembler.o
+  CC      arch/XCore/XCoreInstPrinter.o
+  CC      arch/XCore/XCoreMapping.o
+  CC      arch/XCore/XCoreModule.o
+  CC      MCInst.o
+  AR      libcapstone.a
+ar: creating ./libcapstone.a
+make -C sdb
+CC main.c
+BIN sdb
+CC PIC buffer.c
+CC PIC cdb.c
+CC PIC cdb_make.c
+CC PIC sdb.c
+CC PIC num.c
+CC PIC ls.c
+CC PIC ht.c
+CC PIC base64.c
+CC PIC json.c
+CC PIC match.c
+CC PIC ns.c
+CC PIC lock.c
+CC PIC disk.c
+CC PIC util.c
+CC PIC query.c
+CC PIC array.c
+CC PIC fmt.c
+CC PIC journal.c
+LIB libsdb.so.0.10.2
+make -C zip
+make -C udis86
+make -C java
+CC code.c
+CC class.c
+CC ops.c
+CC dsojson.c
+ar: creating libr_java.a
+make -C tcc
+ar: creating libr_tcc.a
+make -C grub
+CC file.c
+CC term.c
+CC device.c
+CC err.c
+CC env.c
+CC disk.c
+CC fs.c
+CC misc.c
+CC time.c
+CC list.c
+CC partition.c
+CC mm.c
+CC fshelp.c
+CC reiserfs.c
+CC ext2.c
+CC fat.c
+CC ntfs.c
+CC ntfscomp.c
+CC cpio.c
+CC tar.c
+CC xfs.c
+CC ufs.c
+CC ufs2.c
+CC hfs.c
+CC hfsplus.c
+CC udf.c
+CC iso9660.c
+CC minix.c
+CC jfs.c
+CC fb.c
+CC sfs.c
+CC grubfs.c
+CC msdos.c
+CC gpt.c
+CC apple.c
+CC amiga.c
+CC sun.c
+CC bsdlabel.c
+CC sunpc.c
+ar: creating libgrubfs.a
+make -C gdb
+CC core.c
+CC libgdbr.c
+CC messages.c
+CC packet.c
+CC utils.c
+ar: creating lib/libgdbr.a
+a - src/core.o
+a - src/libgdbr.o
+a - src/messages.o
+a - src/packet.o
+a - src/utils.o
+make -C qnx
+CC core.c
+CC libqnxr.c
+CC packet.c
+CC sigutil.c
+CC utils.c
+ar: creating lib/libqnxr.a
+a - src/core.o
+a - src/libqnxr.o
+a - src/packet.o
+a - src/sigutil.o
+a - src/utils.o
+DIR util
+DIR hash
+CC state.c
+CC md5c.c
+CC crc16.c
+CC crc32.c
+CC sha1.c
+CC hash.c
+CC md4.c
+CC hamdist.c
+CC entropy.c
+CC sha2.c
+CC calc.c
+CC xxhash.c
+calc.c: In function 'r_hash_calculate':
+calc.c:39:8: warning: unused variable 'pres' [-Wunused-variable]
+CC adler32.c
+LD libr_hash.so
+DIR socket
+DIR reg
+DIR cons
+DIR db
+DIR magic
+DIR bp
+DIR search
+DIR config
+CC reg.c
+CC config.c
+CC apprentice.c
+CC arena.c
+CC ascmagic.c
+CC value.c
+CC callback.c
+CC cons.c
+CC bp.c
+CC search.c
+CC bytepat.c
+CC db.c
+CC table.c
+CC fsmagic.c
+CC cond.c
+CC double.c
+CC profile.c
+CC strings.c
+CC watch.c
+LD libr_config.so
+CC aes-find.c
+CC rsa-find.c
+CC funcs.c
+LD libr_db.so
+CC is_tar.c
+CC regexp.c
+CC magic.c
+LD libr_reg.so
+CC softmagic.c
+CC pipe.c
+CC io.c
+CC xrefs.c
+CC keyword.c
+CC plugin.c
+CC traptrace.c
+CC bp_arm.c
+CC bp_bf.c
+CC bp_mips.c
+CC bp_ppc.c
+CC bp_x86.c
+CC output.c
+CC grep.c
+CC less.c
+CC utf8.c
+CC line.c
+CC hud.c
+LD libr_search.so
+CC rgb.c
+CC input.c
+CC pal.c
+CC editor.c
+LD libr_bp.so
+CC 2048.c
+CC canvas.c
+CC canvas_line.c
+LD libr_magic.so
 [...]
 ```
 to be continued

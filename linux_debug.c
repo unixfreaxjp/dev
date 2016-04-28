@@ -1,5 +1,6 @@
 /* radare - LGPL - Copyright 2009-2015 - pancake */
 /* three blocks added #if 0 to ignore error in compilation ppc - during test @unixfreaxjp */
+/* warning: unstable code - rough test changes here and there */
 
 #include <r_debug.h>
 #include <r_asm.h>

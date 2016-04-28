@@ -382,7 +382,7 @@ int linux_reg_read (RDebug *dbg, int type, ut8 *buf, int size) {
 #endif
 		break;
 
-#if 0 commented for ppc */
+#if 0
  	case R_REG_TYPE_SEG:
  	case R_REG_TYPE_FLG:
  	case R_REG_TYPE_GPR:

@@ -777,5 +777,7 @@ Oops
 ```
 The p/native/linux/linux_debug.c needs more adjustment for ppc CPU, either to be added in linux_ppc.h or in linux_debug.c
 
+Adding report:
+https://github.com/radare/radare2/issues/4720#issuecomment-215305072
 
 (to be continued)

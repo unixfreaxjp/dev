@@ -783,4 +783,62 @@ https://github.com/radare/radare2/issues/4720#issuecomment-215305072
 Made additional test patch and reported at:
 https://github.com/radare/radare2/issues/4720#issuecomment-215339789
 
-(to be continued)
+Done tested the patched #if 0 below:
+```asm
+--- linux_debug.c.TEST  2016-04-28 09:41:04.000000000 +0000
++++ linux_debug.c.ORIG  2016-04-28 03:15:12.004081151 +0000
+@@ -378,16 +378,13 @@
+        #warning not implemented for this platform
+ #endif
+                break;
+-
+-/* #if 0 commented for ppc */
+-       case R_REG_TYPE_SEG:
+-       case R_REG_TYPE_FLG:
+-       case R_REG_TYPE_GPR:
+-               {
+-#if 0                  R_DEBUG_REG_T regs;
+-                       memset (&regs, 0, sizeof (regs));
+-                       memset (buf, 0, size);
+-
++       case R_REG_TYPE_SEG:
++       case R_REG_TYPE_FLG:
++       case R_REG_TYPE_GPR:
++               {
++                       R_DEBUG_REG_T regs;
++                       memset (&regs, 0, sizeof (regs));
++                       memset (buf, 0, size);
+ #if __arm64__ || __aarch64__
+                        {
+                        struct iovec io = {
+@@ -427,19 +424,13 @@
+                long *val = (long*)buf;
+                for (i = 0; i < 8; i++) { // DR0-DR7
+                        if (i == 4 || i == 5) continue;
+-
+-/* #if 0 commented for ppc */
+-
+-#if 0                  if (ptrace (PTRACE_POKEUSER, dbg->pid, r_offsetof (
++                       if (ptrace (PTRACE_POKEUSER, dbg->pid, r_offsetof (
+                                        struct user, u_debugreg[i]), val[i])) {
+                                eprintf ("ptrace error for dr %d\n", i);
+                                perror ("ptrace");
+                        }
+                }
+-
+-/* #if 0 commented for ppc */
+-#if 0          return sizeof(R_DEBUG_REG_T);
+-
++               return sizeof(R_DEBUG_REG_T);
+ #else
+                return false;
+ #endif
+```
+Using latest linux_debug.c for this test in here: https://github.com/unixfreaxjp/dev/blob/master/linux_debug.c
+
+Follow up from @radare here:
+https://github.com/radare/radare2/issues/4720#issuecomment-215410736
+
+Replied and conducting fresh test based on:
+https://github.com/radare/radare2/issues/4720#issuecomment-215421056
+

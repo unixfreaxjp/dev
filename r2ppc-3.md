@@ -1043,4 +1043,5 @@ make: *** [all] Error 2
 Oops
 [...] 
 ```
-to be continued
+Test is in pending.
+Report updated in upstream: https://github.com/radare/radare2/issues/4720#issuecomment-215421056

@@ -409,5 +409,5 @@ Oops
 opened issue radare/radare2#4720
 https://github.com/radare/radare2/issues/4720
 
-test to be continuec in :
+test to be continued in :
 https://github.com/unixfreaxjp/dev/blob/master/r2ppc-2.md

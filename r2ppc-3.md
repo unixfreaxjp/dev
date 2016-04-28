@@ -1016,7 +1016,31 @@ CC asm_ws.c
 CC asm_x86_as.c
 CC asm_x86_cs.c
 CC asm_x86_nasm.c
-
+CC asm_x86_nz.c
+CC asm_x86_olly.c
+CC disasm.c
+CC asmserv.c
+CC assembl.c
+CC asm_x86_tab.c
+CC asm_x86_udis.c
+CC asm_xcore_cs.c
+CC asm_xtensa.c
+CC xtensa-dis.c
+CC xtensa-isa.c
+CC xtensa-modules.c
+CC elf32-xtensa.c
+CC asm_z80.c
+CC asm_z80_cr.c
+CC asm.c
+CC code.c
+LD libr_asm.so
+CC asm_propeller.c
+CC propeller_disas.c
+gcc: warning: /test/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+gcc: warning: /test/radare2/libr/../shlr/capstone/libcapstone.a: linker input file unused because linking not done
+make[1]: *** [all] Error 2
+make: *** [all] Error 2
+Oops
 [...] 
 ```
 to be continued

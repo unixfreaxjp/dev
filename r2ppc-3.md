@@ -4,7 +4,7 @@
 - Previous test (2nd) log: https://github.com/unixfreaxjp/dev/blob/master/r2ppc-2.md
 - Report updated in upstream: https://github.com/radare/radare2/issues/4720#issuecomment-215421056
 - Suggestion for upstream is added: https://github.com/radare/radare2/issues/4720#issuecomment-215931583
-- Current fail build errors:
+- Current fail build errors: (suggested error in handles for _ppc_ cpu arch on linux platform) 
 ```asm
 p/native/linux/linux_debug.c: In function 'linux_reg_read':
 p/native/linux/linux_debug.c:385:4: error: unknown type name 'R_DEBUG_REG_T'

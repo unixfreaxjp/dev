@@ -12,7 +12,7 @@ p/native/linux/linux_debug.c: In function 'linux_reg_write':
 p/native/linux/linux_debug.c:427:43: error: 'struct user' has no member named 'u_debugreg'
 p/native/linux/linux_debug.c:433:17: error: 'R_DEBUG_REG_T' undeclared (first use in this function)
 ```
-- Fresh pull to complete full test for last build on the issue:
+- Tast build tested on the issue:
 ```asm
 $ git clone https://github.com/radare/radare2.git
 Cloning into 'radare2'...
@@ -23,7 +23,7 @@ Receiving objects: 100% (105375/105375), 56.10 MiB | 142 KiB/s, done.
 Resolving deltas: 100% (74381/74381), done.
 Checking out files: 100% (2520/2520), done.
 ```
-Starting non root basic compile:
+Fresh pull to complete full build test log, starting *non root* build (sys/user.sh):
 ```asm
 
 $ sys/user.sh

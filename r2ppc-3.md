@@ -2,7 +2,9 @@
 
 - Upstream issue: https://github.com/radare/radare2/issues/4720
 - Previous test (2nd) log: https://github.com/unixfreaxjp/dev/blob/master/r2ppc-2.md
-- Fresh pull to complete full test build:
+- Report updated in upstream: https://github.com/radare/radare2/issues/4720#issuecomment-215421056
+- Suggestion for upstream is added: https://github.com/radare/radare2/issues/4720#issuecomment-215931583
+- Fresh pull to complete full test for last build on the issue:
 ```asm
 $ git clone https://github.com/radare/radare2.git
 Cloning into 'radare2'...
@@ -1043,5 +1045,4 @@ make: *** [all] Error 2
 Oops
 [...] 
 ```
-Test is in pending.
-Report updated in upstream: https://github.com/radare/radare2/issues/4720#issuecomment-215421056
+Test is in pending, until suggestion discussed.

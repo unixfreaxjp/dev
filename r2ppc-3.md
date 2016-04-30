@@ -12,7 +12,7 @@ p/native/linux/linux_debug.c: In function 'linux_reg_write':
 p/native/linux/linux_debug.c:427:43: error: 'struct user' has no member named 'u_debugreg'
 p/native/linux/linux_debug.c:433:17: error: 'R_DEBUG_REG_T' undeclared (first use in this function)
 ```
-- Tast build tested on the issue:
+- Last build tested on the issue:
 ```asm
 $ git clone https://github.com/radare/radare2.git
 Cloning into 'radare2'...

@@ -187,7 +187,7 @@ WARNING: Unknown flag '--without-debugger'.
 cancelled, it seems invalid option, checking the without option...
 ```asm
 Optional Features:
-  --disable-debugger     disable native debugger features
+  --disable-debugger     disable native debugger features   <========== THIS
   --with-sysmagic        force to use system's magic
   --disable-loadlibs     disable loading plugins
   --without-fork         disable fork
@@ -256,7 +256,7 @@ Final report:
  - VERSION = 0.10.3-git
  - USE_LIB_ZIP = 0
  - USE_LIB_MAGIC = 0
- - DEBUGGER = 0
+ - DEBUGGER = 0    <======= disable-debugger
  - CC = gcc
  - USERCC = gcc
  - USEROSTYPE = gnulinux

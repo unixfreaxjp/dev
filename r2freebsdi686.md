@@ -1134,7 +1134,7 @@ Makefile:47: recipe for target 'all' failed
 gmake: *** [all] Error 2
 $
 ```
-Same result on AMD65 FreeBSD
+Same result on AMD64 FreeBSD
 ```asm
 $ date
 Mon May 16 17:22:53 JST 2016

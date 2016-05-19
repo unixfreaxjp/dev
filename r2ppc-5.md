@@ -1,3 +1,4 @@
+```asm
 $ date
 Thu May 19 03:27:35 UTC 2016
 $
@@ -1073,3 +1074,4 @@ make[1]: *** [all] Error 2
 make: *** [all] Error 2
 Oops
 $
+```

@@ -1,3 +1,10 @@
+Test for r2 with the "configure --disable-debugger" option.
+This test objectivity:
+
+1. Build test .............. OK!
+
+2. ESIL disabled test .......OK!
+
 ################################
 ##                            ##
 ##       BUILD TEST           ##

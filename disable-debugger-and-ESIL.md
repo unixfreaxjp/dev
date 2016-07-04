@@ -5,11 +5,6 @@ This test objectivity:
 
 2. ESIL disabled test .......OK!
 
-################################
-##                            ##
-##       BUILD TEST           ##
-##                            ##
-################################
 
 In order to test configure --disable-debugger I was tweaking the build.sh in these part:
 ```asm
@@ -34,7 +29,7 @@ fi
 ```
 this is for my test purpose, so DO NOT USE THIS METHOD FOR PRODUCTION @unixfreaxjp
 
-
+```asm
 ################################
 ##                            ##
 ##       BUILD TEST           ##
@@ -1074,13 +1069,15 @@ Removed 97 shared plugins that are already static
 ~/radare2$
 
 [07/04/16 10:59 PM] BUILD SUCCESS!!
+```
 
+```asm
 ################################
 ##                            ##
 ##  RUNNING TEST              ##
 ##                            ##
 ################################
-
+```
 Environment
 ```asm
 $

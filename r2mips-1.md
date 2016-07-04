@@ -2133,7 +2133,7 @@ vaddr=0x00404380 paddr=0x00404380 baddr=0x00000000 laddr=0x00000000 type=program
 0x004043d0  ffff ffff ffff ffff ffff ffff ffff ffff  ................
 0x004043e0  ffff ffff                                ....
 
-
+[0x00404380]> e asm.arch=mips
 [0x00404380]> e asm.arch
 mips
 [0x00404380]> pd 5

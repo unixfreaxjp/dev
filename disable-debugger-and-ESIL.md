@@ -1102,7 +1102,7 @@ the test bin is /bin/ls
   Machine:                           Advanced Micro Devices X86-64
   Version:                           0x1
 ```
-The simple run tests for ESIL:
+The simple run tests for debugger and ESIL:
 ```asm
 
 $ r2 -d /bin/ls

@@ -591,7 +591,7 @@ vaddr=0x10003890 paddr=0x00003890 baddr=0x10000000 laddr=0x00000000 type=program
    :
    
    
-   stepping in visual mode
+// stepping in visual mode
    
 [0x100038d8 13% 240 /bin/ls]> ?0;f tmp;s.. @ pc
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
@@ -702,7 +702,33 @@ Press <enter> to return to Visual mode.    lwz r29, 0x14(r1)
 0x10018394 string[8] "__color"
 ```
 
+###Simple ESIL test###
+
+debugging load basic
+```asm
+$ r2 -d /bin/ls
+Process with PID 17902 started...
+attach 17902 17902
+bin.baddr 0x10000000
+Assuming filepath /bin/ls
+asm.bits 32
+r_debug_reg: error reading registers
+r_debug_reg: error reading registers
+r_debug_reg: error reading registers
+ -- Wait a minute! I found a bug, self-fixing ... OK
+r_debug_reg: error reading registers
+[0x00000000]> 
+```
+my ESIL command for test
+```asm
+[0x00000000]> aeso
+r_debug_reg: error reading registers
+r_debug_reg: error reading registers
+r_debug_reg: error reading registers
+```
+ESIL is disabled, good work!!
+
+
 ### Built and test completed successfully.
 
 @unixfreaxjp
-

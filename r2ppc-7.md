@@ -781,6 +781,11 @@ r_debug_reg: error reading registers
 r_debug_reg: error reading registers
 ```
 
+### Additional ###
+
+Can't quit r2 once register error occurred: 
+![](https://lh3.googleusercontent.com/7seZOJsXzYSi7D2G9P6MK4KnHWc5PZHlbph8-28WxL6jnFAd44tiq1EwXsTOVCHBQqPZpLrExR9dSh-oVjZiTKPuasI418e0xXOeQEAe_q5c-Xl44UyDvqNjIldEWnbfj9DXUVVjTerrRLxsUHS1IwF1M4P8IDmgwMrXHJD5oCyTWRRfiZArk_7QMos2MJt7SfRiPyj2rfP_rxPxu4-5SIBlB246k2gpfA3STBU3cqyzdGJ7FSmVXDvSMw7XSouNcyAJHbWPRrPd2eNid0ca7NG6g_CnSblDw-gk8LvagHLhSUGGlyS15uZLbblIhxVp65Tk8KIAbeN6j9ikz236-9Wys1IB8SQ0sglg2KAsSdpDOHaFPkIwfsy7i0MLZdCWp06haOAAaxk-qdWPcjGh6x_VvxticN5mDfJllgkga9uEKI2-Sr1Z5xDjws8JOdT8LdH0MIWIfI3bYQ030gR_XzWSDPnfdDafOEJ-aJyvnvKHtV3Sbza86eUEmU24cCFPuehEUC7aeB2eG4SH-p6YXHQJCh2vfkfJnfvZaeQiPtJP1hYgpGiM_a0Jd_LKi-TxIeCQtA95dbXwiTMp_VlBN0hOQmU8gIpFhQa-Og_fuMa89wrw-Q=w289-h394-no)
+
 ### Conclusion ##
 - Built was done successfully, and Big endian is parsed
 - need confirmation on debugger ERROR: r_debug_reg: error reading registers

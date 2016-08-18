@@ -1,6 +1,6 @@
 ### radare2 v0.10.5 ###
 
-built and test in __Linux/PPC x32__ (big endian binaries)
+built and tested in __Linux/PPC x32__ (debian) (big endian binaries)
 
 ```asm
 [0x10003c90]> !uname -a&&date

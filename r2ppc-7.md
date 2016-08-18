@@ -730,9 +730,35 @@ grepping stuff ;)
 0x10018394 string[8] "__color"
 ```
 
-###Simple ESIL test###
+###Simple Debugging and ESIL test###
 
-debugging load basic
+(Re-pasted) Compile/built option:
+```asm
+Final report:
+     :
+ - PREFIX = /test//bin/prefix/radare2/
+ - HAVE_LIB_GMP = 0
+ - HAVE_OPENSSL = 0
+ - USE_CAPSTONE = 0
+ - HAVE_FORK = 1
+ - VERSION = 0.10.6-git
+ - USE_LIB_ZIP = 0
+ - USE_LIB_MAGIC = 0
+ - DEBUGGER = 1
+ - CC = gcc
+ - USERCC = gcc
+ - USEROSTYPE = gnulinux
+ - LIBVERSION = 0.10.6-git
+ - BUILD = powerpc-unknown-linux-gnu
+ - HOST = powerpc-unknown-linux-gnu
+ - TARGET = powerpc-unknown-linux-gnu
+     :
+```
+The test purpose:
+- debug enability test
+- ESIL enabilitytest
+
+debugging load basic test.....FAIL
 ```asm
 $ r2 -d /bin/ls
 Process with PID 17902 started...
@@ -747,16 +773,17 @@ r_debug_reg: error reading registers
 r_debug_reg: error reading registers
 [0x00000000]> 
 ```
-my ESIL command for test
+my ESIL command for test.....FAIL
 ```asm
 [0x00000000]> aeso
 r_debug_reg: error reading registers
 r_debug_reg: error reading registers
 r_debug_reg: error reading registers
 ```
-ESIL is disabled, good work!!
 
-
-### Built and test completed successfully.
+### Conclusion ##
+- Built was done successfully, and Big endian is parsed
+- need confirmation on debugger ERROR: r_debug_reg: error reading registers
+- Same ERROR lead to ESIL disabiluty (ERROR: r_debug_reg: error reading registers)
 
 @unixfreaxjp

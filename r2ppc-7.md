@@ -520,6 +520,7 @@ Now add /test//bin to your PATH
 
 ### running test for specific big endian case
 
+basic tests
 ```asm
 $ r2 -v
 radare2 0.10.6-git 12146 @ linux-ppc-32 git.0.10.5-8-g50473d8
@@ -589,17 +590,19 @@ vaddr=0x10003890 paddr=0x00003890 baddr=0x10000000 laddr=0x00000000 type=program
 0x10003e00  3900 0000 4bff fed0 3929 0001 88e9 0000  9...K...9)......
 0x10003e10  3807 ffc0 5400 063e 2b80 003e 41bd fe2c  8...T..>+..>A..,
    :
+``` 
    
-   
-// stepping in visual mode
-   
+###stepping in visual mode###
+
+Don't use debugger, you know this drill..
+```asm
 [0x100038d8 13% 240 /bin/ls]> ?0;f tmp;s.. @ pc
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 0x00000000  7f45 4c46 0102 0100 0000 0000 0000 0000  .ELF............
 0x00000010  0002 0014 0000 0001 1000 3890 0000 0034  ..........8....4
 0x00000020  0001 a3d8 0000 0000 0034 0020 0009 0028  .........4. ...(
 0x00000030  001f 001e 0000 0006 0000 0034 1000 0034  ...........4...4
-srr0 0x00000000     srr1 0x00000000       r0 0xffffb2e3       r1 0x00000000                                                                                                                     $
+srr0 0x00000000     srr1 0x00000000     r0 0xffffb2e3       r1 0x00000000$
 r2 0x00000000       r3 0x00000000       r4 0x00000000       r5 0x00000000
 r6 0x00000000       r7 0x00000000       r8 0x00001001       r9 0x00000000
 r10 0x00000000      r11 0x00000000      r12 0x00000000      r13 0x00006631
@@ -645,9 +648,10 @@ Press <enter> to return to Visual mode.    lwz r29, 0x14(r1)
 0x00001001  5f63 7479 7065 5f62 5f6c 6f63 0067 6574  _ctype_b_loc.get
 0x00001011  656e 7600 5f5f 6672 6561 6469 6e67 0073  env.__freading.s
 0x00001021  7464 6572 7200 7763 7769 6474            tderr.wcwidt
+```
 
-// grepping stuff ;)
-
+grepping stuff ;)
+```asm
 0x10015d7b string[12] "8sort_files"
 0x10015e98 string[11] "_pcdb_lswd"
 0x10016248 string[7] "posix_"

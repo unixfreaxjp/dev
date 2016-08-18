@@ -25,6 +25,11 @@ Memory          : 256 MB
 
 ### cleanups
 ```asm
+################################
+##                            ##
+##       CLEANUP              ##
+##                            ##
+################################
 $ make uninstall
 cd libr && make uninstall PARENT=1
 make[1]: Entering directory `/test//radare2/libr'
@@ -125,6 +130,12 @@ Updating 2f5ead1..50473d8
 ### installing 
 
 ```asm
+################################
+##                            ##
+##       BUILD TEST           ##
+##                            ##
+################################
+
 $ sys/user.sh 
 WARNING: Updating from remote repository
 Already up-to-date.
@@ -390,7 +401,7 @@ ar: creating libsdb.a
   CC      arch/Mips/MipsModule.o
                 :
 
-
+      :
 CC rafind2.c
 LD rafind2
 CC rarun2.c
@@ -522,6 +533,12 @@ Now add /test//bin to your PATH
 
 basic tests
 ```asm
+################################
+##                            ##
+##       RUNNING TEST         ##
+##                            ##
+################################
+
 $ r2 -v
 radare2 0.10.6-git 12146 @ linux-ppc-32 git.0.10.5-8-g50473d8
 commit: 50473d8897962e42c1b03d9e7ab5912e01809d49 build: 2016-08-18

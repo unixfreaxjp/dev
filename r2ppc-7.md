@@ -3,6 +3,12 @@
 built and tested in __Linux/PPC x32__ (debian) (big endian binaries)
 
 ```asm
+################################
+##                            ##
+##       ENVIRONMENT          ##
+##                            ##
+################################
+
 [0x10003c90]> !uname -a&&date
 Linux powerpc 3.2.0-4-powerpc #1 Debian 3.2.78-1 ppc
 Thu Aug 18 05:09:41 UTC 2016
@@ -30,6 +36,7 @@ Memory          : 256 MB
 ##       CLEANUP              ##
 ##                            ##
 ################################
+
 $ make uninstall
 cd libr && make uninstall PARENT=1
 make[1]: Entering directory `/test//radare2/libr'

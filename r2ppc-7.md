@@ -518,7 +518,7 @@ Now add /test//bin to your PATH
 
 ### running test for specific big endian case
 
-
+```asm
 $ r2 -v
 radare2 0.10.6-git 12146 @ linux-ppc-32 git.0.10.5-8-g50473d8
 commit: 50473d8897962e42c1b03d9e7ab5912e01809d49 build: 2016-08-18

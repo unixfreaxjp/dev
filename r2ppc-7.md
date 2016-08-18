@@ -744,7 +744,7 @@ Final report:
  - VERSION = 0.10.6-git
  - USE_LIB_ZIP = 0
  - USE_LIB_MAGIC = 0
- - DEBUGGER = 1
+ - DEBUGGER = 1  <======== HERE
  - CC = gcc
  - USERCC = gcc
  - USEROSTYPE = gnulinux

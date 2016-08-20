@@ -1,6 +1,10 @@
 ### radare2 v0.10.5 test for Linux/MIPS ###
 
-Reference issue: https://github.com/radare/radare2/issues/5305
+Reference issue: 
+
+BigEndian support in the ELF parser #5305
+
+https://github.com/radare/radare2/issues/5305
 
 built was successfully tested as per Linux/PPC one here https://github.com/unixfreaxjp/dev/blob/master/r2ppc-7.md with a slight difference in warning during compilation. 
 and below is an a bit thorough test result in __Linux/MIPS x32__ (debian) (big endian binaries)

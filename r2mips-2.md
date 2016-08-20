@@ -317,8 +317,9 @@ Using vmin 0x100000 and vmax 0x42bf70
 [x] Analyze value pointers (aav)
 [x] Constructing a function name for fcn.* and sym.func.* functions (aan)
 ```
-ESIL emulation is having problem, okay.
 ## EDIT: aaaa probem also occured in osx.. unrelated new bug maybe had just spotted.
+
+ESIL emulation is having problem, okay.
 
 Let's be sure by following..
 ```asm

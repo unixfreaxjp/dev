@@ -1,4 +1,4 @@
-### radare2 v0.10.5 ###
+### radare2 v0.10.5 test for Linux/MIPS ###
 
 built was successfully tested as per Linux/PPC one here https://github.com/unixfreaxjp/dev/blob/master/r2ppc-7.md with a slight difference in warning during compilation. 
 and below is an a bit thorough test result in __Linux/MIPS x32__ (debian) (big endian binaries)
@@ -20,11 +20,14 @@ $
 $ r2 /bin/ls
  -- Already up-to-date.
 [0x00404380]> e asm.arch; e asm.bits ; i~bin
+mips
+32
 file     /bin/ls
 bintype  elf
 binsz    118808
+$ uname -a 
+Linux mips 3.2.0-4-4kc-malta #1 Debian 3.2.51-1 mips GNU/Linux
 ```
-
 ## Straight to the running test :)
 
 // check parser vs loaded bins..

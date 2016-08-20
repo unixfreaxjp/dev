@@ -2,6 +2,9 @@
 
 built and tested in __Linux/PPC x32__ (debian) (big endian binaries)
 
+The purpose of the test is for static analysis for big endian binaries in the Linux/PPC native environmemt. 
+We don't expect that the debugger and ESIL is working here.
+
 ```asm
 ################################
 ##                            ##

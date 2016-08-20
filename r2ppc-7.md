@@ -1,5 +1,7 @@
 ### radare2 v0.10.5 ###
 
+Reference issue: https://github.com/radare/radare2/issues/5305
+
 built and tested in __Linux/PPC x32__ (debian) (big endian binaries)
 
 The purpose of the test is for static analysis for big endian binaries in the Linux/PPC native environmemt. 

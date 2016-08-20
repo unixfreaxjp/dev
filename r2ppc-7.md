@@ -1,6 +1,10 @@
 ### radare2 v0.10.5 ###
 
-Reference issue: https://github.com/radare/radare2/issues/5305
+Reference issue: 
+
+BigEndian support in the ELF parser #5305
+
+https://github.com/radare/radare2/issues/5305
 
 built and tested in __Linux/PPC x32__ (debian) (big endian binaries)
 

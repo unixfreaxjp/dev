@@ -1,4 +1,5 @@
 debian-mipsel:~/radare2$ sys/user.sh
+```asm
 WARNING: Updating from remote repository
 [ 4628.964000] ipv6: Unknown symbol __ip4_datagram_connect (err 0)
 [ 4628.964000] ipv6: Unknown symbol ip_idents_reserve (err 0)
@@ -1280,19 +1281,20 @@ ln -fs "/home/TEST/radare2/sys/indent.sh" "/home/TEST/bin/prefix/radare2//bin/r2
 ln: failed to create symbolic link `/home/TEST/bin/prefix/radare2//bin/r2-indent': No such file or directory
 make: *** [symstall] Error 1
 Oops
+```
 
 // there is no ~/bin/prefix/radare2//bin/r2-indent
-
+```asm
 $ ls -alF ~/bin/prefix/radare2/
 total 16
 drwxr-xr-x 4 TEST TEST 4096 Feb 13 22:20 ./
 drwxr-xr-x 3 TEST TEST 4096 Feb 13 21:12 ../
 drwxr-xr-x 3 TEST TEST 4096 Feb 13 22:20 lib/
 drwxr-xr-x 5 TEST TEST 4096 Feb 13 22:20 share/
+```
 
-
-// fix way...
-
+// Use this to fix and continue the installation (suggested temporary workaroud prior fix...)
+```asm
 $ mkdir /home/mung/bin/prefix/radare2/bin/
 $ ln -fs "/home/mung/radare2/sys/indent.sh" "/home/mung/bin/prefix/radare2//bin/r2-indent"  
 $ make install love
@@ -1300,28 +1302,8 @@ $ make rmd
 $ make install-pkgconfig-symlink
 $ make symstall install-symlink
 $ make user-install
-
-
+```
 // patch
-
-install love: install-doc install-man install-www
-	cd libr && ${MAKE} install PARENT=1
-	cd binr && ${MAKE} install
-	cd shlr && ${MAKE} install
-	for DIR in ${DATADIRS} ; do \
-		(cd "$$DIR" ; ${MAKE} install ); \
-	done
-	cd "$(DESTDIR)$(LIBDIR)/radare2/" ;\
-		rm -f last ; ln -fs $(VERSION) last
-	cd "$(DESTDIR)$(DATADIR)/radare2/" ;\
-		rm -f last ; ln -fs $(VERSION) last
-	rm -rf "${DESTDIR}${DATADIR}/radare2/${VERSION}/hud"
-	mkdir -p "${DESTDIR}${DATADIR}/radare2/${VERSION}/hud"
-#------------------- start patch ------------------------------
-	mkdir -p ${DESTDIR}${BINDIR}
-#-------------------- end patch --------------------------------
-	ln -fs "${PWD}/sys/indent.sh" "${DESTDIR}${BINDIR}/r2-indent"
-	cp -f doc/hud "${DESTDIR}${DATADIR}/radare2/${VERSION}/hud/main"
-	mkdir -p "${DESTDIR}${DATADIR}/radare2/${VERSION}/"
-	sys/ldconfig.sh
-	./configure-plugins --rm-static $(DESTDIR)/$(LIBDIR)/radare2/last/
+```bash
+see the Issue
+```

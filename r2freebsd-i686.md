@@ -9,8 +9,9 @@ Compile log:
 $ uname -a 
 FreeBSD xxxx {redacted} RELEASE-p43 #0: Sat May 28 00:15:23 UTC 2018 BUILD i386
 
-$ git show|head -1
-commit 8274d307deb701b6d0b7b8337d5e347b5b541cc8
+$ date&&git describe --all --long
+Sat Sep 15 20:45:56 JST 2018
+heads/master-0-g8274d30
 
 $ sys/install.sh
 WARNING: Updating from remote repository

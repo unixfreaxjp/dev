@@ -17,7 +17,7 @@ So, the build will run on 4 job(s).
 
 export USE_R2_CAPSTONE=
 
-/home/rik/radare2
+/home/test/radare2
 configure-plugins: Loading ./plugins.cfg ..
 configure-plugins: Generating libr/config.h ..
 configure-plugins: Generating libr/config.mk ..
@@ -132,12 +132,12 @@ In file included from ../include/zipconf.h:16:0,
 ../../../libr/include/r_types.h:212:52: error: expected ';', ',' or ')' before 'str'
  typedef int (*PrintfCallback)(const char *restrict str, ...);
                                                     ^
-/home/rik/radare2/libr/../global.mk:41: recipe for target 'zip_add_dir.o' failed
+/home/test/radare2/libr/../global.mk:41: recipe for target 'zip_add_dir.o' failed
 make[2]: *** [zip_add_dir.o] Error 1
 make[2]: *** Waiting for unfinished jobs....
-/home/rik/radare2/libr/../global.mk:41: recipe for target 'zip_add.o' failed
+/home/test/radare2/libr/../global.mk:41: recipe for target 'zip_add.o' failed
 make[2]: *** [zip_add.o] Error 1
-/home/rik/radare2/libr/../global.mk:41: recipe for target 'zip_add_entry.o' failed
+/home/test/radare2/libr/../global.mk:41: recipe for target 'zip_add_entry.o' failed
 make[2]: *** [zip_add_entry.o] Error 1
 In file included from ../include/zipconf.h:16:0,
                  from ../include/zip.h:58,
@@ -146,7 +146,7 @@ In file included from ../include/zipconf.h:16:0,
 ../../../libr/include/r_types.h:212:52: error: expected ';', ',' or ')' before 'str'
  typedef int (*PrintfCallback)(const char *restrict str, ...);
                                                     ^
-/home/rik/radare2/libr/../global.mk:41: recipe for target 'zip_close.o' failed
+/home/test/radare2/libr/../global.mk:41: recipe for target 'zip_close.o' failed
 make[2]: *** [zip_close.o] Error 1
 Makefile:25: recipe for target 'zip/libr_zip.a' failed
 make[1]: *** [zip/libr_zip.a] Error 2
@@ -156,7 +156,6 @@ make: *** [all] Error 2
 $ date&&git describe --all --long
 Sat Sep 15 20:52:56 JST 2018
 heads/master-0-g8274d30
-
 ```
 
 End of additional report

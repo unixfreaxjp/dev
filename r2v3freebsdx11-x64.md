@@ -42,10 +42,23 @@ Thread model: posix
  - TARGET = amd64-unknown-freebsd
 ```
 
+There is no error for older FreeBSD using cc compiler
+```asm
+$ cc --version
+cc (GCC) 4.2.1 20070831 patched [FreeBSD]
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+$ r2 -v
+radare2 3.0.0-git 19489 @ freebsd-x86-32 git.2.9.0-154-g16697b4
+commit: 16697b4cc781f553d46aaa63ec474996e2e40dca build: 2018-10-17__03:35:42
+
+```
+
 Possible error/bug source:
 ```asm
 
-// #### ERROR: :undefined reference to `clock_nanosleep' #####
+// #### ERROR: :undefined reference to `clock_nanosleep' ##### // <=== sleep() usleep() usage? 
 
 CC rax2.c
 cc: warning: argument unused during compilation: '-pie'

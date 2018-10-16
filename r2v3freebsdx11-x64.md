@@ -10,7 +10,7 @@ HEAD is now at 647a6fa43 Clarify BIOS section mapping in comments
 
 // compiler info
 FreeBSD clang version 3.4.1 (tags/RELEASE_34/dot1-final 208032) 20140512
-Target: x86_64-unknown-freebsd10.4
+Target: x86_64-unknown-freebsd10.xxx
 Thread model: posix
 
 (no compile preset variable aka default)

@@ -42,7 +42,163 @@ Thread model: posix
  - TARGET = amd64-unknown-freebsd
 ```
 
-Error log:
+Possible error/bug source:
+```asm
+
+// #### ERROR: :undefined reference to `clock_nanosleep' #####
+
+CC rax2.c
+cc: warning: argument unused during compilation: '-pie'
+LD rax2
+/test/radare2/libr/util/libr_util.so: undefined reference to `clock_nanosleep'
+cc: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+// #### WARNING: :macro45 :redefined9: #####
+
+(425): #define PTRACE_SYSCALL PT_STEPCC idpool.c
+(434): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(703):  #define PTRACE_SYSCALL PT_STEP
+(706):  #define PTRACE_SYSCALL PT_STEP
+(709): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(713): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(734): #define PTRACE_SYSCALL PT_STEP
+(737): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(870): #define PTRACE_SYSCALL PT_STEP
+(873): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(904): 9#define PTRACE_SYSCALL PT_STEP:CC tags.c
+(912): #define PTRACE_SYSCALL PT_STEPnote
+(919): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(927): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)SDB linux-arm-32.sdb.txt
+(974): #define PTRACE_SYSCALL PT_STEP
+(985): 9#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX):
+(991): #define PTRACE_SYSCALL PT_STEP
+(1003):  #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)(aka 'int')
+(1123): #define PTRACE_SYSCALL PT_STEP
+(1134): :#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) CC fs_fb.c
+(1231): #define PTRACE_SYSCALL PT_STEP
+(1241): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1347): #define PTRACE_SYSCALL PT_STEPCC cc.c
+(1353): :#define PTRACE_SYSCALL PT_STEP89
+(1356): previous#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1359): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1392): #define PTRACE_SYSCALL PT_STEP
+(1405): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)CC msvc.c
+(1436): 'PTRACE_SYSCALL'pdb/dbi.c#define PTRACE_SYSCALL PT_STEP :
+(1440):  #define PTRACE_SYSCALL PT_STEP/usr/include/sys/ptrace.h
+(1446): definition:#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) 50
+(1449): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)1
+(1508): #define PTRACE_SYSCALL PT_STEP
+(1516): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1572): #define PTRACE_SYSCALL PT_STEP
+(1578): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)'PTRACE_SYSCALL'
+(1581): #define PTRACE_SYSCALL PT_STEP
+(1584): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1613): #define PTRACE_SYSCALL PT_STEP :In file included from
+(1618): : 9#define PTRACE_SYSCALL PT_STEP/test/radare2/libr/include/r_debug.h:/usr/include/sys/ptrace.h
+(1622): /test/radare2/libr/include/r_debug.h'PTRACE_SYSCALL'89#define PTRACE_SYSCALL PT_STEP:warning note:
+(1625): definitionmacro#define PTRACE_SYSCALL PT_STEP note/usr/include/sys/ptrace.h
+(1628):  9#define PTRACE_SYSCALL PT_STEP
+(1630): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)   /usr/include/sys/ptrace.h
+(1635): /usr/include/sys/ptrace.h:#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)previous#define PTRACE_SYSCALL PT_STEP:
+(1640): :notedefinition#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)89:
+(1645): snap.cis#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX):note
+(1651): /test/radare2/libr/include/r_debug.h3 #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)::
+(1658): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)warning
+(1665):  ::#define PTRACE_SYSCALL PT_STEPredefined39
+(1669): In file included from          ^#define PTRACE_SYSCALL PT_STEP/test/radare2/libr/include/r_core.h
+(1677): note  :#define PTRACE_SYSCALL PT_STEP: 45warning
+(1683): 9#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)here9:'PTRACE_SYSCALL'#define PTRACE_SYSCALL PT_STEP:
+(1687):  :#define PTRACE_SYSCALL PT_STEPmacro        ^#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1694): : #define PTRACE_SYSCALL PT_STEP/usr/include/sys/ptrace.hprevious1
+(1701): #define PTRACE_SYSCALL PT_STEP
+(1702): 89note#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1703): #define PTRACE_SYSCALL PT_STEP::
+(1711): In file included from :9definition#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)p/debug_esil.c :
+(1714):  #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)is5
+(1719): :4previous#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)45:
+(1726): p/debug_io.c #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1728): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) warning5
+(1735): 9macro11#define PTRACE_SYSCALL PT_STEP:  warning warning
+(1741): warning#define PTRACE_SYSCALL PT_STEP:
+(1748): ::#define PTRACE_SYSCALL PT_STEP45/test/radare2/libr/include/r_debug.h9note
+(1754): : :/test/radare2/libr/include/r_debug.his#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) macro'PTRACE_SYSCALL' :/test/radare2/libr/include/r_debug.h
+(1758): redefined: :9#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)#define PTRACE_SYSCALL PT_STEP :
+(1761):   #define PTRACE_SYSCALL PT_STEP'PTRACE_SYSCALL'        ^1definition        ^
+(1768): 89/usr/include/sys/ptrace.h#define PTRACE_SYSCALL PT_STEPmacro #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)::
+(1774): :#define PTRACE_SYSCALL PT_STEP
+(1776): #define PTRACE_SYSCALL PT_STEPnote/usr/include/sys/ptrace.h
+(1781): here :#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)previous
+(1783):  #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)definitionnote        ^
+(1787):  definition#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)is 11
+(1792): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(1794): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)1
+(1818): 23:9'PTRACE_SYSCALL'#define PTRACE_SYSCALL PT_STEP:
+(1825): In file included from #define PTRACE_SYSCALL PT_STEP/usr/include/sys/ptrace.h:/test/radare2/libr/include/r_core.h
+(1831): :'PTRACE_SYSCALL'::In file included from #define PTRACE_SYSCALL PT_STEP89note 923/test/radare2/libr/include/r_core.h
+(1836): 'PTRACE_SYSCALL'warning45/test/radare2/libr/include/r_debug.h #define PTRACE_SYSCALL PT_STEP : ::/usr/include/sys/ptrace.hnoteis
+(1840): macro :definition#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)#define PTRACE_SYSCALL PT_STEP warning
+(1845): #define PTRACE_SYSCALL PT_STEP'PTRACE_SYSCALL': 9
+(1847): :macro'PTRACE_SYSCALL'previous#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) /usr/include/sys/ptrace.h        ^
+(1851): : 9/usr/include/sys/ptrace.h#define PTRACE_SYSCALL PT_STEP ::
+(1853): hereprevious 89#define PTRACE_SYSCALL PT_STEP :        ^
+(1856): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) note:        ^
+(1860): definition: :: warning#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) 989cfile.c generated.
+(1865): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) :
+(1868): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)definitionprevious:
+(1871): here  warning#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)in generated.
+(1874):  graph.c#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)core1:        ^
+(1895): function45:3#define PTRACE_SYSCALL PT_STEP :23:
+(1908): 'PTRACE_SYSCALL'warning:/test/radare2/libr/include/r_debug.h: s#define PTRACE_SYSCALL PT_STEP :  : generated.
+(1913): #define PTRACE_SYSCALL PT_STEP  /usr/include/sys/ptrace.h
+(1917): #define PTRACE_SYSCALL PT_STEP #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)9
+(1921): #define PTRACE_SYSCALL PT_STEPmacro
+(1925): In file included from previous 89#define PTRACE_SYSCALL PT_STEPlog.c :
+(1930): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) 89
+(1934): isprevious9#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)  :
+(1938): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) previouswarning generated.
+(1942): #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)is'PTRACE_SYSCALL'CC cmd_api.c
+(1946): redefined warning warning#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) generated.
+(1950): #define PTRACE_SYSCALL PT_STEP        ^
+(1966): macro:/test/radare2/libr/include/r_core.h6#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) 45::
+(1971): #define PTRACE_SYSCALL PT_STEP /test/radare2/libr/include/r_debug.h23gdiff.c
+(1980): 'PTRACE_SYSCALL': :/test/radare2/libr/include/r_core.h#define PTRACE_SYSCALL PT_STEP 9:
+(1984):  warning: #define PTRACE_SYSCALL PT_STEPredefined: 45definition/usr/include/sys/ptrace.h
+(1986): 9vmenus.cis89        ^#define PTRACE_SYSCALL PT_STEP'PTRACE_SYSCALL':: :
+(1991): redefinedwarning/test/radare2/libr/include/r_core.h#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX):: :
+(1993): 23note:/usr/include/sys/ptrace.h#define PTRACE_SYSCALL PT_STEP:
+(1998): : :#define PTRACE_SYSCALL PT_STEP herepreviousnote89
+(2000): definition9        ^warning#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) previous:
+(2005):  : 89macro#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)here:
+(2008):         ^#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)definition
+(2011):  #define PTRACE_SYSCALL PT_STEP warningis
+(2017): previous#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(2021):  #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)1
+(2034): ::#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)4523
+(2045): #define PTRACE_SYSCALL PT_STEPmacro/test/radare2/libr/include/r_debug.h:
+(2051): In file included from #define PTRACE_SYSCALL PT_STEP::
+(2057): ::89 #define PTRACE_SYSCALL PT_STEP239:macro
+(2061): 45In file included from warning #define PTRACE_SYSCALL PT_STEP'PTRACE_SYSCALL':blaze.c: definitionnote
+(2066):  /usr/include/sys/ptrace.h#define PTRACE_SYSCALL PT_STEP : 23redefined#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)is:
+(2070): here:        ^note'PTRACE_SYSCALL'/test/radare2/libr/include/r_debug.h#define PTRACE_SYSCALL PT_STEP        ^9
+(2074): :macro45#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) previous :        ^
+(2078): : :is#define PTRACE_SYSCALL PT_STEP/usr/include/sys/ptrace.h:9
+(2082):  #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX): isnote
+(2086):  :redefined: #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)definition9
+(2088): previous'_ALIGN'is #define PTRACE_SYSCALL PT_STEP          ^
+(2093):  #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)here
+(2098):         ^definition:#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)
+(2103): :1#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX)50 warning
+(2112): /test/radare2/libr/include/r_debug.h warning4definition#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX): generated.
+(2124): :#define PTRACE_SYSCALL PT_STEP9
+(2127): :#define PTRACE_SYSCALL PT_STEP89'PTRACE_SYSCALL'
+(2130): /usr/include/sys/ptrace.hnote#define PTRACE_SYSCALL PT_STEP::
+(2133): 9previous#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX):
+(2137):  warning #define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) generated.
+(2141): 1#define PTRACE_SYSCALL  (PTRACE_SCE | PTRACE_SCX) warning
+```
+
+Complete Error build log:
 ```asm
 $ 
 $ sys/install.sh

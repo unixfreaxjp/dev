@@ -52,13 +52,14 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 $ r2 -v
 radare2 3.0.0-git 19489 @ freebsd-x86-32 git.2.9.0-154-g16697b4
 commit: 16697b4cc781f553d46aaa63ec474996e2e40dca build: 2018-10-17__03:35:42
-
 ```
 
-Possible error/bug source:
+Error reason is this coded commit: https://github.com/radare/radare2/commit/a018c02cb703b8c11524e9fe2c3fc83f1e0bf5df
+
+Reference for possible error/bug source:
 ```asm
 
-// #### ERROR: :undefined reference to `clock_nanosleep' ##### // <=== sleep() usleep() usage? 
+// #### ERROR: :undefined reference to `clock_nanosleep' ##### // <=== sleep() usleep() NANOSLEEP usage? 
 
 CC rax2.c
 cc: warning: argument unused during compilation: '-pie'

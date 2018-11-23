@@ -1,4 +1,8 @@
-ref: https://twitter.com/malwaremustd1e/status/1065954294896066560
+See ref:
+```c
+https://twitter.com/malwaremustd1e/status/1065954294896066560
+https://github.com/radare/radare2/issues/11834#issuecomment-441233089
+```
 Found several Linux embeded systems with older compiler doesn't support NANOSLEEP, 
 also Debian 7 (Wheezy) has similar problem (fyi: supported until May 2018 by debian.org),
 on those cases you will face the error as per below in installing radare2 > ver 3:

@@ -13,9 +13,5 @@ Recoded/Patched by @ unixfreaxjp - the code is tweaked here and there for educat
 
 contact: @unixfreaxjp 
 
-# license 
-
-<a href=https://en.wikipedia.org/wiki/WTFPL>WTFPL version 2</a>
-
 ---
 @unixfreaxjp

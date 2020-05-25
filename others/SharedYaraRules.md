@@ -4,8 +4,6 @@ I coded several malware family detection rules:
 
 [a9876ddb](https://github.com/unixfreaxjp/rules/commit/a9876ddbd2c08d1f32c7dca2bc554e3f096f0a8a#diff-f3f0c6e992b7562598d9865b6fe8b3a6)
 
-[37b8ad95](https://github.com/unixfreaxjp/rules/commit/37b8ad95582335d6754f4828de5faae203a2388a#diff-f3f0c6e992b7562598d9865b6fe8b3a6)
-
 [9cb2a055](https://github.com/unixfreaxjp/rules/commit/9cb2a05585bc271f5bab77edd693ff79f1cb54e5#diff-f3f0c6e992b7562598d9865b6fe8b3a6)
 
 [61cbfdc3](https://github.com/unixfreaxjp/rules/commit/61cbfdc3af985c0799fd2966c2283fa27726ce08#diff-f3f0c6e992b7562598d9865b6fe8b3a6)

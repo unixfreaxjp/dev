@@ -1,4 +1,6 @@
-I coded several malware family detection rules:
+I coded several Yara rules to detect some malware families, Windows, Linux or MacOSX:
+
+[df984c5d](https://github.com/unixfreaxjp/rules/commit/df984c5d9bf65b690fbec849e3cc73f5b6f90dd6)
 
 [f7059e33](https://github.com/unixfreaxjp/rules/commit/f7059e33fd3c6ee1096bfd0ec733d67fffee7c4a#diff-f3f0c6e992b7562598d9865b6fe8b3a6)
 

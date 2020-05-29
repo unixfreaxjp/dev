@@ -1,6 +1,6 @@
 # olderkernel_interceptor
 
-Linux security lecture: A simple code for older-kernel's intercepting for syscall in linux kernel.
+Linux security lecture: A simple code for older-kernel's intercepting for syscall in linux kernel, to be used for RE/DFIR against compromised systems or on analysis research session on specific Linux malicious code.
 
 # how
 
